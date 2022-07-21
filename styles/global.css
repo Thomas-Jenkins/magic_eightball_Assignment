@@ -33,3 +33,31 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+/* my code after */
+main {
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+}
+.box {
+    display: grid;
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+#user-input {
+    margin: 2px 2.5%;
+}
+.box p {
+    display: grid;
+    justify-content: center;
+}
+#submit {
+    display: grid;
+    max-width: 80%;
+    margin: 5px 10% 0 10%; 
+}
