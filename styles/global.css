@@ -33,6 +33,8 @@ footer {
     justify-content: flex-end;
     background-color: var(--footer-background);
 }
+
+
 /* my code after */
 main {
     display: grid;
@@ -61,3 +63,112 @@ main {
     max-width: 80%;
     margin: 5px 10% 0 10%; 
 }
+#ball-background {
+    display: grid;
+    height: 1000px;
+    width: 1000px;
+    background-color: black;
+    border-radius: 500px;
+    align-items: center;
+    justify-content: center;
+}
+#eight-chara {
+    display: grid;
+    height: 400px;
+    width: 400px;
+    background-color: white;
+    margin: 60px 87.5px;
+    border-radius: 200px; 
+    align-items: center;
+    justify-items: center;
+}
+#eight-chara div {
+    height: 200px;
+    width: 200px;
+    display: grid;
+    color:brown;
+    font-size: 25px; 
+    align-items: center;
+    justify-content: center; 
+}
+.inline {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+}
+#reset {
+    display: grid;
+}
+.hidden {
+    display: none;
+}
+#user-question {
+    display: grid;
+    font-size: 25px; 
+    width: max-content;
+    padding: 0 5px; 
+    align-items: center;
+    justify-content: center;
+    border: 2px solid black;
+    
+}
+.shake {
+    animation: shake 0.82s cubic-bezier(.5,.07,.19,.97) both;
+    transform: translate(0, 0);
+}
+
+.fade-in {
+    animation: fade-in 1.82s ease-out both;
+    opacity: 0;
+}
+
+.fade-out {
+    animation: fade-out .5 ease-in both;
+    opacity: 1;
+}
+@keyframes fade-out {
+    100% {
+        opacity: 1;
+    }
+    75% {
+        opacity: .75;
+    }
+    50% {
+        opacity: .5;
+    }
+    0% {
+        opacity: 0;
+    }
+}
+
+@keyframes fade-in {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+    }
+    75% {
+        opacity: .5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes shake {
+    10%, 90% {
+      transform: translate(-1px, 0);
+    }
+
+    20%, 80% {
+      transform: translate(2px, 0);
+    }
+
+    30%, 50%, 70% {
+      transform: translate(-4px, 0);
+    }
+
+    40%, 60% {
+      transform: translate(4px, 0);
+    }
+} 
