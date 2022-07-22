@@ -34,33 +34,29 @@ const reset = document.getElementById('reset');
 
 
 submit.addEventListener('click', () => {
-    // inputBox.classList.add('fade-out');
-    // setTimeout(() => {
-    //     inputBox.classList.add('hidden');
-    // }, 2); 
-
-    // setTimeout(() => {
-    //     outputBox.classList.remove('hidden');
-    // }, 4);
-
-    inputBox.classList.add('hidden');
-    outputBox.classList.remove('hidden');
+    inputBox.classList.add('fade-out');
+    setTimeout(() => {
+        inputBox.classList.add('hidden');
+    }, 4800); 
+    setTimeout(() => {
+        outputBox.classList.add('fade-in');
+        outputBox.classList.remove('transparent');
+    }, 4801);
+    setTimeout(() => {
+        const ballBackground = document.getElementById('ball-background');
+        ballBackground.classList.add('shake');
+    }, 7799);
+    setTimeout(() => {
+        answer.classList.add('fade-in');
+    }, 8500);
     
     const answerIndexRandom = Math.floor(Math.random() * answers.length);
     const randomAnswer = answers[answerIndexRandom];
 
     answer.textContent = randomAnswer;
 
-    
-
-
     const question = userInput.value;
     userQuestion.textContent = question;
-    
-    const ballBackground = document.getElementById('ball-background');
-    ballBackground.classList.add('shake');
-
-    answer.classList.add('fade-in');
     
 });
 

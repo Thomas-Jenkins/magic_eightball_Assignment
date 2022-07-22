@@ -54,6 +54,9 @@ main {
 #user-input {
     margin: 2px 2.5%;
 }
+.transparent {
+    opacity: 0;
+}
 .box p {
     display: grid;
     justify-content: center;
@@ -101,6 +104,7 @@ main {
 .hidden {
     display: none;
 }
+
 #user-question {
     display: grid;
     font-size: 25px; 
@@ -112,30 +116,24 @@ main {
     
 }
 .shake {
-    animation: shake 0.82s cubic-bezier(.5,.07,.19,.97) both;
+    animation: shake 0.60s cubic-bezier(.5,.07,.19,.97) both;
     transform: translate(0, 0);
 }
 
 .fade-in {
-    animation: fade-in 1.82s ease-out both;
-    opacity: 0;
+    animation: fade-in ease 3s;
+    opacity: 1;
 }
 
 .fade-out {
-    animation: fade-out .5 ease-in both;
+    animation: fade-out ease 5s;
     opacity: 1;
 }
 @keyframes fade-out {
-    100% {
+    0% {
         opacity: 1;
     }
-    75% {
-        opacity: .75;
-    }
-    50% {
-        opacity: .5;
-    }
-    0% {
+    100% {
         opacity: 0;
     }
 }
@@ -143,12 +141,6 @@ main {
 @keyframes fade-in {
     0% {
         opacity: 0;
-    }
-    50% {
-        opacity: 0;
-    }
-    75% {
-        opacity: .5;
     }
     100% {
         opacity: 1;
