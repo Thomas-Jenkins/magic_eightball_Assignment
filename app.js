@@ -30,10 +30,12 @@ const inputBox = document.getElementById('input-box');
 const outputBox = document.getElementById('output-box');
 const userQuestion = document.getElementById('user-question');
 const reset = document.getElementById('reset');
-
+const ballBackground = document.getElementById('ball-background');
 
 
 submit.addEventListener('click', () => {
+    const question = userInput.value;
+    userQuestion.textContent = question;
     inputBox.classList.add('fade-out');
     setTimeout(() => {
         inputBox.classList.add('hidden');
@@ -42,25 +44,24 @@ submit.addEventListener('click', () => {
         outputBox.classList.add('fade-in');
         outputBox.classList.remove('transparent');
     }, 4801);
-    setTimeout(() => {
-        const ballBackground = document.getElementById('ball-background');
+    setTimeout(() => {     
         ballBackground.classList.add('shake');
     }, 7799);
     setTimeout(() => {
         answer.classList.add('fade-in');
+        answer.classList.remove('transparent');
     }, 8500);
-    
     const answerIndexRandom = Math.floor(Math.random() * answers.length);
     const randomAnswer = answers[answerIndexRandom];
-
     answer.textContent = randomAnswer;
-
-    const question = userInput.value;
-    userQuestion.textContent = question;
-    
 });
 
 reset.addEventListener('click', () => {
     inputBox.classList.remove('hidden');
-    outputBox.classList.add('hidden');
+    inputBox.classList.remove('fade-out');
+    outputBox.classList.remove('fade-in');
+    outputBox.classList.add('transparent');
+    answer.classList.remove('fade-in');
+    answer.classList.add('transparent');
+    ballBackground.classList.remove('shake');
 });
