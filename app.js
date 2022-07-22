@@ -23,7 +23,12 @@ const answers = [
     'It is wisdom to recognize necessity',
     'All we have to decide is what to do with the time that is given us',
     'Even the very wise cannot see all ends',
-    'On the morning of the third day, look to the east'
+    'On the morning of the third day, look to the east',
+    'It is not our part to master all the tides of the world',
+    'I will not say',
+    'despair is only for those who see the end beyond all doubt',
+    'Courage will now be your best defence against the storm that is at hand',
+    'You Must Trust Yourself. Trust Your Own Strength'
 ];
 
 const inputBox = document.getElementById('input-box');
