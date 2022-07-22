@@ -91,11 +91,12 @@ main {
 #answer {
     height: 200px;
     width: 200px;
-    display: grid;
+    display: flex;
     color:brown;
     font-size: 25px; 
     align-items: center;
     justify-content: center; 
+    text-align: center;
 }
 .inline {
     display: grid;
